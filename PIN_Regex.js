@@ -10,12 +10,22 @@
 
 
 let pin = 1234;
-const regex = /\d{4,6}/;
+let wod = "cat"
+// const regex = /[^A-Za-z]/;
+// const regex = /[A-Za-z]/;
+// const regex = /A-Za-z/;
+// const regex = /\d{4,6}/;
+const regex = /\d{4,6}[^A-Za-z]/;
+// const regex = /\W\d{4,6}/;
 
 pinLength = pin.toString().length;
 
-if (pinLength == 6 || pinLength == 4) {
-  console.log(r.test(pin))
-} else {
-  console.log(false);
-}
+
+console.log(regex.test(pin))
+console.log(regex.test(wod))
+
+// if (pinLength == 6 || pinLength == 4) {
+//   console.log(regex.test(pin))
+// } else {
+//   console.log(false);
+// }
