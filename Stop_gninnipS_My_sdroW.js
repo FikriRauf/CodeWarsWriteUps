@@ -9,21 +9,19 @@
 
 
 // Notes:
-// split sentence into each words
-// store each words into a variable
-// algorithm
-//     check each words if >= 5 characters
-//     reverse it if condition true
-// combine = unreverse_word + reverse_word
+// - check      : words with characters >= 5 w/i phrase
+// - split      : seperate those words and store in variable
+// - reverse    : take those words and reverse them
+// - assemble   : outcome = unreverse_word + reverse_word
 
 
-// if (word >= 5) {
-//     reverse it
-// }
+const wordsMoreThanFiveCharacters = /\w{5,}/g;
+let sentence = "Hey fellow warriors";
+//              0123456789abcdefghi
+// let wordHolder = sentence.matchAll(wordsMoreThanFiveCharacters);
+let wordHolder = [...sentence.matchAll(wordsMoreThanFiveCharacters)];
+console.log(wordHolder.length);
 
-
-const rege = /\w{5,}/;
-
-let wordSpeech = "Hey fellow warriors";
-
-console.log(wordSpeech.matchAll(rege));
+for (int i; i > wordHolder.length; i++) {
+    
+}
