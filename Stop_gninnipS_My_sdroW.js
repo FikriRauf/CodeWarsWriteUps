@@ -18,10 +18,25 @@
 const wordsMoreThanFiveCharacters = /\w{5,}/g;
 let sentence = "Hey fellow warriors";
 //              0123456789abcdefghi
-// let wordHolder = sentence.matchAll(wordsMoreThanFiveCharacters);
-let wordHolder = [...sentence.matchAll(wordsMoreThanFiveCharacters)];
-console.log(wordHolder.length);
 
-for (int i; i > wordHolder.length; i++) {
+let matchesFound = sentence.match(wordsMoreThanFiveCharacters)
+
+// attempts to extract only the string from the matchAll array 
+// using forOf, forIn, and for loops but doesn't work
+// but if put in the template literal, it displays as string only
+// from https://javascript.info/regexp-groups, [matchAll] : "it’s an array with additional properties" as compared to [match]
+// so decided to just use [match] for now
+
+function reversing() {
+    let yo = matchesFound[1]
     
+    function reverseString() {
+        let splitString = yo.split("")
+        console.log(splitString)
+    }        
+
+    reverseString();
+
 }
+
+reversing();
