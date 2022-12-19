@@ -9,34 +9,45 @@
 
 
 // Notes:
-// - check      : words with characters >= 5 w/i phrase
-// - split      : seperate those words and store in variable
-// - reverse    : take those words and reverse them
-// - assemble   : outcome = unreverse_word + reverse_word
+// split sentence into each words
+// store words into a variable or array
+// reverse word(s) >= 5 characters
+// place back the reversed word(s) 
 
 
-const wordsMoreThanFiveCharacters = /\w{5,}/g;
-let sentence = "Hey fellow warriors";
-//              0123456789abcdefghi
+// algorithm
+//     check each words if >= 5 characters
+//     reverse it if condition true
+// combine = unreverse_word + reverse_word
 
-let matchesFound = sentence.match(wordsMoreThanFiveCharacters)
 
-// attempts to extract only the string from the matchAll array 
-// using forOf, forIn, and for loops but doesn't work
-// but if put in the template literal, it displays as string only
-// from https://javascript.info/regexp-groups, [matchAll] : "it’s an array with additional properties" as compared to [match]
-// so decided to just use [match] for now
+// if (word >= 5) {
+//     reverse it
+// }
 
-function reversing() {
-    let yo = matchesFound[1]
-    
-    function reverseString() {
-        let splitString = yo.split("")
-        console.log(splitString)
-    }        
 
-    reverseString();
 
+// a=11
+// b=12
+// c=13
+// d=14
+// e=15
+// f=16
+// g=17
+// h=18
+// i=19
+
+const rege = /\w{5,}/g;
+
+//                0123456789abcdefghi
+let wordSpeech = "Hey fellow warriors";
+let hols = [...wordSpeech.matchAll(rege)];
+
+let wordHolder = [];
+for (const hol of hols) {
+    wordHolder = hol
+    console.log(wordHolder);
 }
 
-reversing();
+// console.log(wordHolder);
+// console.log(typeof(hols));
