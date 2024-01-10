@@ -31,12 +31,8 @@ function spinWords(sentence) {
   let reverseWords = [];
 
   for (let word of words) {
-    if (word.length < 5) {
-      reverseWords.push(word);
-    }
-    if (word.length >= 5) {
-      reverseWords.push(word.split("").reverse().join(""));
-    }
+    if (word.length < 5) reverseWords.push(word);
+    if (word.length >= 5) reverseWords.push(word.split("").reverse().join(""));
   }
   return reverseWords.join(" ");
 }
