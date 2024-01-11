@@ -13,9 +13,4 @@ Notes
     Output string must be two numbers separated by a single space, and highest number is first.
 */
 
-function highAndLow(numbers) {
-  var arrayNumber = numbers;
-  var sortArray = arrayNumber.sort();
-  var output = sortArray[0] + sortArray[9];
-  console.log(output);
-}
+function highAndLow(numbers) {}
